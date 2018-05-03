@@ -1,0 +1,56 @@
+header{
+    background-color: #a6a6a699;
+    height: 30px;
+}
+
+
+.dots span { display: none}
+.dots .current{
+    display: block;
+
+}
+
+
+
+/*
+| --------------------------------------------------------------------------
+| Site
+| --------------------------------------------------------------------------
+*/ 
+
+.btn{
+    display: block;
+    margin: auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #337ab7;
+    color: #FFF;
+    border: none;
+    font-size: 12px;
+    padding: 0px 20px 0px 20px;
+  }
+  
+  
+    
+  /*
+  | --------------------------------------------------------------------------
+  | Utils
+  | --------------------------------------------------------------------------
+  */ 
+  
+  .u-block-auto{
+      display: block;
+      margin:auto;
+  }
+  
+  .inline-block{
+    display: inline-block;
+  }
+  
+  .u-mbm{
+    margin-bottom: 30px;
+  }
+  .u-mtm{
+    margin-top: 30px;
+  }
