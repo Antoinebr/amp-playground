@@ -35,38 +35,34 @@
 
         
         
-       <!-- Store complex nested JSON data in <amp-state> elements. 
+       <!--
        
+        The state 
+
+       Also possible to AJAXIFY the state :
+
        <amp-state id="products" src="https://ampbyexample.com/json/products.json"></amp-state>
 
-       Also possible to AJAXIFY the state 
-
        -->
-        <amp-state id="myAnimals">
-        <script type="application/json">
-            {
-            "zoidberg": {
-                "style": "greenBackground",
-                "pic" : "http://lorempicsum.com/futurama/900/675/3"
-            },
-            "bender": {
-                "style": "redBackground",
-                "pic" : "http://lorempicsum.com/futurama/900/675/4"
-            }
-            }
-        </script>
+        <amp-state id="characters">
+            <script type="application/json">
+                {
+                    "zoidberg": {
+                        "style": "greenBackground",
+                        "pic" : "http://lorempicsum.com/futurama/900/675/3"
+                    },
+                    "bender": {
+                        "style": "redBackground",
+                        "pic" : "http://lorempicsum.com/futurama/900/675/4"
+                    }
+                }
+            </script>
         </amp-state>
 
-     
-
-        <!-- CSS classes can also be added or removed with [class]. -->
-        <!-- <p class="greenBackground" [class]="myAnimals[currentAnimal].style">
-        Each animal has a different background color.
-        </p> -->
 
         <amp-img 
             src="http://lorempicsum.com/futurama/900/675/4" 
-            [src]="myAnimals[currentAnimal].pic"
+            [src]="characters[currentCharacters].pic"
             width="900"
             height="675"
             layout="responsive"
@@ -75,11 +71,11 @@
         
         <div class="container">
         
-            <p class="u-mtm" [text]="'This is ' + currentAnimal + ' !!' ">This is Bender !!</p>
+            <p class="u-mtm" [text]="'This is ' + currentCharacters + ' !!' ">This is Bender !!</p>
 
-            <button  class="btn inline-block" on="tap:AMP.setState({currentAnimal: 'bender'})">Set to bender</button>
+            <button  class="btn inline-block" on="tap:AMP.setState({currentCharacters: 'bender'})">Set to bender</button>
 
-            <button class="btn inline-block" on="tap:AMP.setState({currentAnimal: currentAnimal == 'zoidberg' ? 'bender' : 'zoidberg' })">Set to zoidberg</button>
+            <button class="btn inline-block" on="tap:AMP.setState({currentCharacters: currentCharacters == 'zoidberg' ? 'bender' : 'zoidberg' })">Set to zoidberg</button>
             
             <hr class="u-mbm">
 
